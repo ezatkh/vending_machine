@@ -1,0 +1,11 @@
+.moneySlots{
+    margin-top: 3%;
+    border-top: 2px solid black;
+}
+h5{
+    text-align: start;
+}
+.MoneyRadio{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}

@@ -1,0 +1,37 @@
+.machine{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    border: 2px solid black;
+    margin: 2%;
+}
+.snackSlots{
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    border-right: 2px solid black;
+}
+.push{
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.pushField{
+    font-weight: bold;
+    font-size:5vw;
+}
+.itemPush{
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size:3vw;
+    margin-right:15px;
+}
+.MoneyScreen{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5vw;
+    justify-content: space-around;
+    
+}

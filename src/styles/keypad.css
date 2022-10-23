@@ -1,0 +1,53 @@
+.keyPad{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.keys{
+    margin: 3%;
+    display: grid;
+    grid-template-columns: 1fr 2fr ; 
+}
+.letters{
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.numbers{
+    border-left: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+}
+.radio{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.screen{
+    background-color: rgb(134, 133, 129);
+    width: 100%;
+}
+.screen{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+.itemList{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid black;
+    margin-bottom: 7px;
+}
+.itemsSelected{
+    margin-top: 10px;
+    border-top: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.noItem{
+    margin-bottom: 7px;
+    color: brown;
+    font-weight: bold;
+    font-size: 1.3vw;
+}
