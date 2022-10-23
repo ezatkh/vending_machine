@@ -16,7 +16,7 @@ class SnackSlots extends Component {
         snack = {
           name: String.fromCharCode(i + 65) + j,
           price: (j + 1) * 2,
-          amount: Math.ceil(Math.random() * 5),
+          amount: Math.floor(Math.random() * 6),
         };
         snacksToAdd.push(snack);
         snack = {};
@@ -31,9 +31,18 @@ class SnackSlots extends Component {
 getSnacks(){
   this.props.getSnacks(this.state.snacks);
 }
+changeFlag(){
+  let flag=false;
+  this.props.editFlag(flag);
+}
 
   componentDidMount() {
     this.fillSnacks(5, 5);
+  }
+  componentDidUpdate(){
+    if(this.props.changeFlag){
+      this.changeFlag()
+    }
   }
   render() {
     return (

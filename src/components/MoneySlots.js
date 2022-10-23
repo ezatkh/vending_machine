@@ -4,6 +4,7 @@ export default class MoneySlots extends Component {
   constructor() {
     super();
     this.state = {
+      cardInput: null,
       coinsSelected: null,
       CoinsSlots: [
         { value: 10, type: "C" },
@@ -15,7 +16,11 @@ export default class MoneySlots extends Component {
       ],
     };
   }
-  payment = () => {};
+  cardInputChange = (e) => {
+    this.setState({
+      cardInput: e.target.value,
+    });
+  };
 
   coinsPayement = (e) => {
     let coinInfo = e.target.value.split(":");
@@ -24,9 +29,16 @@ export default class MoneySlots extends Component {
       coinsSelected: coinInfo[0],
     });
   };
-  pay=()=>{
-    this.props.pay(this.state.coinsSelected)
-  }
+  pay = () => {
+    this.props.pay(this.state.coinsSelected);
+  };
+  cardPay = () => {
+    this.setState({
+      cardInput:""
+    })
+    this.props.pay("card");
+
+  };
   render() {
     return (
       <div className="moneySlots">
@@ -42,23 +54,31 @@ export default class MoneySlots extends Component {
                     id={element.value + element.type}
                     name="Money"
                     value={element.value + ":" + element.type}
-                  />{" "}
+                  />
                   <label htmlFor={element.value + element.type}>
                     {element.value} {element.type}
-                  </label>{" "}
+                  </label>
                 </div>
               );
             })}
           </div>
         </div>
+        <button className="purshase" onClick={this.pay}>
+          Pay
+        </button>
         <div className="card">
           <h5>card</h5>
-        </div>
-        <div className="btns">
-          <button className="purshase" onClick={this.pay}>
-            Purshase
+          <input
+            onChange={this.cardInputChange}
+            value={this.state.cardInput}
+            type="number"
+            min="1000000000000000"
+            max="9999999999999999"
+            placeholder="Must be 16 numbers"
+          />
+          <button className="purshase" onClick={this.cardPay}>
+            Pay
           </button>
-          <button className="cancel">Cancel</button>
         </div>
       </div>
     );
