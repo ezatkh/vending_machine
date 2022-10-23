@@ -1,5 +1,21 @@
 .App {
   text-align: center;
-
-
+}
+button{
+  background-color: black;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: "Inter var",ui-sans-serif,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.1rem;
+  padding: .1rem 1rem;
+  text-align: center;
+  margin: 5px;
+}
+button:hover {
+  background-color: #374151;
 }

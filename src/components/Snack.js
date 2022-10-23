@@ -9,7 +9,7 @@ export default class Snack extends Component {
     return (
       <div className={styleStock}>
         <div className='name'>{this.props.oneSnack.name}</div>
-        <div className='price'>price:{this.props.oneSnack.price}</div>
+        <div className='price'>{this.props.oneSnack.price}$</div>
       </div>
     )
   }

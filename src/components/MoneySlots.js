@@ -43,7 +43,7 @@ export default class MoneySlots extends Component {
     return (
       <div className="moneySlots">
         <div className="coins">
-          <h5>Coins</h5>
+          <h5>Cash payment </h5>
           <div className="MoneyRadio">
             {this.state.CoinsSlots.map((element) => {
               return (
@@ -64,10 +64,10 @@ export default class MoneySlots extends Component {
           </div>
         </div>
         <button className="purshase" onClick={this.pay}>
-          Pay
+          Pay 
         </button>
         <div className="card">
-          <h5>card</h5>
+          <h5>Card payment </h5>
           <input
             onChange={this.cardInputChange}
             value={this.state.cardInput}
